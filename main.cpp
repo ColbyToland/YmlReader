@@ -136,8 +136,7 @@ void writeFile(string filename)
         fs << "}";
     fs << "]";
 
-    fs.release();                                       // explicit close
-    cout << "Write Done." << endl;
+    fs.release();
 }
 
 
@@ -365,12 +364,16 @@ int main( int argc, char** argv )
     
     cout << "Writing: " << endl;
     writeFile(filename);
+    cout << "Write Done." << endl;
     
     cout << endl;
     
     cout << "Reading: " << endl;
     bool success = readFile(filename);    
     if (!success) return 1;
+    cout << "Read Done." << endl;
+    
+    cout << endl;
     
     CalData* config = CalData::getInstance();
     cout << string(*config) << endl;
