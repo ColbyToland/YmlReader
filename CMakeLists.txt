@@ -15,6 +15,7 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 add_executable(${PROJ_NAME} main.cpp
                             CalData.cpp
+                            ConfigParser.cpp
                             TextureConfigData.cpp)
 
 target_link_libraries(${PROJ_NAME} 
